@@ -8,6 +8,10 @@ import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
+export const PAGES_COMPONENTS = [
+  PagesComponent,
+];
+
 @NgModule({
   imports: [
     PagesRoutingModule,
@@ -18,7 +22,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
     MiscellaneousModule,
   ],
   declarations: [
-    PagesComponent,
+    PagesComponent
   ],
 })
 export class PagesModule {

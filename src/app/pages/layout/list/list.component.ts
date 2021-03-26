@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { fruits } from './fruits-list';
+import { NbLayoutScrollService } from '@nebular/theme';
+import { TinyMceService } from 'app/@core/utils';
+import { componentes, fruits } from './fruits-list';
 
 @Component({
   selector: 'ngx-list',
@@ -8,6 +10,8 @@ import { fruits } from './fruits-list';
 })
 export class ListComponent {
   fruits = fruits;
+  componentes = componentes;
+
 
   users: { name: string, title: string }[] = [
     { name: 'Carla Espinosa', title: 'Nurse' },
@@ -16,4 +20,12 @@ export class ListComponent {
     { name: 'Perry Cox', title: 'Doctor of Medicine' },
     { name: 'Ben Sullivan', title: 'Carpenter and photographer' },
   ];
+
+  
+  constructor(private scrollService: NbLayoutScrollService,
+              public tinyMceService: TinyMceService ) {
+
+  }
+  
+  
 }

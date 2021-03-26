@@ -11,6 +11,7 @@ import {
   PlayerService,
   SeoService,
   StateService,
+  DataService,
 } from './utils';
 import { UserData } from './data/users';
 import { ElectricityData } from './data/electricity';

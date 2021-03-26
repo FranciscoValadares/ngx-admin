@@ -1,7 +1,15 @@
-import {Component, OnDestroy} from '@angular/core';
-import { NbThemeService } from '@nebular/theme';
+import { ConstantPool } from '@angular/compiler';
+import {Component, OnDestroy, ViewChild} from '@angular/core';
+import { Router } from '@angular/router';
+import { NbComponentStatus, NbMenuItem, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
+import { NbMenuInternalService } from '@nebular/theme/components/menu/menu.service';
+import { DataService } from 'app/@core/utils';
+import { constants } from 'buffer';
+import { Globals } from 'globals';
 import { takeWhile } from 'rxjs/operators' ;
 import { SolarData } from '../../@core/data/solar';
+import { MENU_ITEMS } from '../pages-menu';
+import { PagesComponent } from '../pages.component';
 
 interface CardSettings {
   title: string;
@@ -15,6 +23,9 @@ interface CardSettings {
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnDestroy {
+
+  statuses: NbComponentStatus[] = [ 'primary', 'success', 'info', 'warning', 'danger' ];
+  @ViewChild('my-nb-menu') menu; 
 
   private alive = true;
 
@@ -78,8 +89,12 @@ export class DashboardComponent implements OnDestroy {
     dark: this.commonStatusCardsSet,
   };
 
+
+     
   constructor(private themeService: NbThemeService,
-              private solarService: SolarData) {
+              private solarService: SolarData,
+              private _dataService: DataService ) {
+
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
@@ -96,4 +111,20 @@ export class DashboardComponent implements OnDestroy {
   ngOnDestroy() {
     this.alive = false;
   }
+
+  public addPrimeiroItemMenu() { 
+    this._dataService.shareData = "primeiro";
+    this._dataService.getItemsDoMenu();
+
+  }
+  public addSegundoItemMenu() { 
+    this._dataService.shareData = "segundo";
+    this._dataService.getItemsDoMenu();
+  }
+
+  public restartItemMenu() { 
+    this._dataService.shareData = undefined;
+    this._dataService.restartItemMenu();
+  }
+ 
 }

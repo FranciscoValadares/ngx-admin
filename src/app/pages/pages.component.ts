@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NbMenuItem, NbMenuService } from '@nebular/theme';
+import { DataService } from 'app/@core/utils/data.service';
+import { Globals } from 'globals';
 
 import { MENU_ITEMS } from './pages-menu';
 
@@ -12,7 +16,13 @@ import { MENU_ITEMS } from './pages-menu';
     </ngx-one-column-layout>
   `,
 })
-export class PagesComponent {
+export class PagesComponent  {
 
   menu = MENU_ITEMS;
+   
+  constructor( private nbMenuService: NbMenuService,
+               private _dataService: DataService ) {
+
+  }
+ 
 }

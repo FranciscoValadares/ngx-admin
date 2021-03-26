@@ -20,6 +20,44 @@ const routes: Routes = [{
       path: 'list',
       component: ListComponent,
     },
+    // Inicio Cotrole one component have multiple templates
+    {
+      path: 'list1',
+      component: ListComponent,
+    },
+    {
+      path: 'list2',
+      component: ListComponent,
+    },
+    {
+      path: 'list3',
+      component: ListComponent,
+    },
+    {
+      path: 'list4',
+      component: ListComponent,
+    },
+    {
+      path: 'list5',
+      component: ListComponent,
+    },
+    {
+      path: 'list6',
+      component: ListComponent,
+    },
+    {
+      path: 'list7',
+      component: ListComponent,
+    },
+    {
+      path: 'list8',
+      component: ListComponent,
+    },
+    {
+      path: 'list9',
+      component: ListComponent,
+    },
+    // Fim Controle
     {
       path: 'infinite-list',
       component: InfiniteListComponent,
@@ -28,6 +66,7 @@ const routes: Routes = [{
       path: 'accordion',
       component: AccordionComponent,
     },
+
     {
       path: 'tabs',
       component: TabsComponent,
