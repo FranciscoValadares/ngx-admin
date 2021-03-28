@@ -1,30 +1,33 @@
  
 
+    
 <div class="lists row">
 
   <div class="col-md-12 col-lg-4 col-xxxl-4">
-    <nb-card class="list-card" status="success">
-      <nb-card-header>Some Fruits</nb-card-header>
-      <nb-card-body>
-        <div *ngFor="let componente of componentes">
-          
-          <nb-checkbox status="basic">{{ componente }} </nb-checkbox>
-        </div>
-        <!-- <nb-list>
-          <nb-list-item *ngFor="let fruit of fruits">
-            {{ fruit }}
-          </nb-list-item>
-        </nb-list> -->
-      </nb-card-body>
-    </nb-card>
-  </div>
+    <!-- <nb-card status="success">
+      <nb-card-header>
+        Características
+      </nb-card-header>
+      <nb-card-body> -->
+      
+        <ngx-dynamic-form [formFields]="formFields | async "></ngx-dynamic-form>
+        <!-- <nb-checkbox status="basic">Basic</nb-checkbox>
+        <nb-checkbox status="primary">Primary</nb-checkbox>
+        <nb-checkbox status="success">Success</nb-checkbox>
+        <nb-checkbox status="danger">Danger</nb-checkbox>
+        <nb-checkbox status="warning">Warning</nb-checkbox>
+        <nb-checkbox status="info">Info</nb-checkbox> -->
+      
+      <!-- </nb-card-body>
+    </nb-card> -->
+  </div> 
 
   <div style='float:right;'>
   <div class="col-md-12 col-lg-8 col-xxxl-8" style="position: fixed;">
 
     <nb-card status="success">
       <nb-card-header>
-        Tiny MCE
+        Relatório/Laudo
       </nb-card-header>
       <nb-card-body>
         <ngx-tiny-mce editor="Francisco">

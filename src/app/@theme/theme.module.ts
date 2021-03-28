@@ -12,6 +12,8 @@ import {
   NbSelectModule,
   NbIconModule,
   NbThemeModule,
+  NbCardModule,
+  NbCheckboxModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSecurityModule } from '@nebular/security';
@@ -21,6 +23,7 @@ import {
   HeaderComponent,
   SearchInputComponent,
   TinyMCEComponent,
+ 
 } from './components';
 import {
   CapitalizePipe,
@@ -38,6 +41,8 @@ import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
+import { DynamicFormInputComponent } from './components/dynamic-form-input/dynamic-form-input.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 
 const NB_MODULES = [
   NbLayoutModule,
@@ -46,6 +51,8 @@ const NB_MODULES = [
   NbActionsModule,
   NbSearchModule,
   NbSidebarModule,
+  NbCardModule,
+  NbCheckboxModule,
   NbContextMenuModule,
   NbSecurityModule,
   NbButtonModule,
@@ -61,6 +68,8 @@ const COMPONENTS = [
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  DynamicFormInputComponent,
+  DynamicFormComponent,
 ];
 const PIPES = [
   CapitalizePipe,
@@ -73,7 +82,7 @@ const PIPES = [
 @NgModule({
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
-  declarations: [...COMPONENTS, ...PIPES],
+  declarations: [...COMPONENTS, ...PIPES, DynamicFormInputComponent, DynamicFormComponent],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {

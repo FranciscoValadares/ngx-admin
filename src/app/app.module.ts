@@ -20,6 +20,9 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicFormInputComponent } from './@theme/components/dynamic-form-input/dynamic-form-input.component';
+import { DynamicFormComponent } from './@theme/components/dynamic-form/dynamic-form.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +31,8 @@ import {
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),
