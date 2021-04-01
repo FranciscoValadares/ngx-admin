@@ -1,25 +1,39 @@
+ 
 
 <div class="row">
-  
-  <div class="buttons-row">
-    
-    <button nbButton hero (click)="addPrimeiroItemMenu()">
-      primeiro 
-    </button>
-    <button nbButton hero (click)="addSegundoItemMenu()">
-      segundo 
-    </button>
-    <button nbButton hero (click)="restartItemMenu()">
-      restart 
-    </button>
-  </div>
- 
-</div>
+<!-- <nb-card accent="info"> -->
+<nb-card size="tiny" accent="info" class="tipos-exames-css" (click)="addPrimeiroItemMenu()"> 
+  <nb-card-header>Raio X</nb-card-header>
+  <nb-card-body>
+    A nebula is an interstellar cloud of dust,  
+  </nb-card-body>
+</nb-card>
+<nb-card accent="success" class="tipos-exames-css" (click)="addSegundoItemMenu()">
+  <nb-card-header>Ressonância Magnética</nb-card-header>
+  <nb-card-body>
+    A nebula is an interstellar cloud of  
+  </nb-card-body>
+</nb-card>
+<nb-card accent="warning" class="tipos-exames-css" (click)="addPrimeiroItemMenu()"> 
+  <nb-card-header>Tomografia por emissão de pósitrons</nb-card-header>
+  <nb-card-body>
+    A nebula is an interstellar cloud of dust,  
+  </nb-card-body>
+</nb-card>
 
-<div class="row">
-  <div class="col-xxl-9">
-    <ngx-ecommerce-visitors-analytics></ngx-ecommerce-visitors-analytics>
-  </div>
+<nb-card accent="danger" class="tipos-exames-css" (click)="addSegundoItemMenu()"> 
+  <nb-card-header>Ultrassonografia</nb-card-header>
+  <nb-card-body>
+    A nebula is an interstellar cloud of dust,  
+  </nb-card-body>
+</nb-card>
 
- 
+<nb-card accent="primary" class="tipos-exames-css" (click)="restartItemMenu()"> 
+  <nb-card-header>Tomografia Computadorizada</nb-card-header>
+  <nb-card-body>
+    A nebula is an interstellar cloud of dust,  
+  </nb-card-body>
+</nb-card>
+
 </div>
+ 

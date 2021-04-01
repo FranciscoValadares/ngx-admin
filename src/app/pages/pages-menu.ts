@@ -59,11 +59,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   
   {
-    title: 'Ultrassonografia',
+    title: 'Modalidades',
     icon: 'text-outline',
     children: [
       {
-        title: 'TinyMCE',
+        title: 'Modalidades',
         link: '/pages/dashboard',//link: '/pages/editors/tinymce',
       },
       {

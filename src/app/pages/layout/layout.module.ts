@@ -5,6 +5,7 @@ import {
   NbButtonModule,
   NbCardModule,
   NbCheckboxModule,
+  NbLayoutModule,
   NbListModule,
   NbRouteTabsetModule,
   NbStepperModule,
@@ -38,6 +39,7 @@ import { NewsService } from './news.service';
     NbUserModule,
     LayoutRoutingModule,
     NbCheckboxModule,
+    NbLayoutModule,
   ],
   declarations: [
     LayoutComponent,

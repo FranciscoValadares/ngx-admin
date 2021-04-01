@@ -11,12 +11,15 @@
     }
   }
   .lists .row .nb-layout-column {
-    padding: 0.75rem 0.75rem 0.75rem;
+    // padding: 0.75rem 0.75rem 0.75rem;
+    // element.style {
+    padding: 1em;
   }
   // .classname{
   //   max-height: 100%;
   //     overflow-y: hidden;
   // }
+  #right { float:right; } 
 }
 
 nb-card-body.example-items-rows {
@@ -25,4 +28,10 @@ nb-card-body.example-items-rows {
 
 nb-checkbox:not(:only-child) {
   margin-right: 1.5rem;
+}
+
+div.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

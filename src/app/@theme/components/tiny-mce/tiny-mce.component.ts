@@ -27,7 +27,11 @@ export class TinyMCEComponent implements OnChanges, OnDestroy, AfterViewInit {
       target: this.host.nativeElement,
       plugins: ['link', 'paste', 'table'],
       skin_url: `${this.locationStrategy.getBaseHref()}assets/skins/lightgray`,
-      element_format : 'html',     
+      element_format : 'html',    
+      template_replace_values: {
+        username : 'Jack Black',
+        staffid : '991234'
+      }, 
 
       setup: editor => {
         this.editor = editor;
@@ -41,6 +45,8 @@ export class TinyMCEComponent implements OnChanges, OnDestroy, AfterViewInit {
         });
       },
       height: '320',
+      font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Oswald=oswald; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+
     });
     this.editor.contentDocument.querySelector('#tinymce').innerHTML = this.tinyMceService.valor;
   }

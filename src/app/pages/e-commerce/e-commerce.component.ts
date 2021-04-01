@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
-import { DataService } from 'app/@core/utils';
+import { DataService, LayoutService } from 'app/@core/utils';
 import { Globals } from 'globals';
 import { PagerComponent } from 'ng2-smart-table/lib/components/pager/pager.component';
 import { PAGES_COMPONENTS } from '../pages.module';
@@ -13,7 +13,9 @@ import { PAGES_COMPONENTS } from '../pages.module';
 })
 export class ECommerceComponent {
 
-  constructor( private _dataService: DataService ) {
+  constructor( private _dataService: DataService, 
+               private sidebarService: NbSidebarService,
+               private layoutService: LayoutService, ) {
   }
 
  
@@ -31,7 +33,21 @@ export class ECommerceComponent {
   public restartItemMenu() { 
     this._dataService.shareData = undefined;
     this._dataService.restartItemMenu();
+    this.showToggleSidebar();
+  }
+
+  toggle() {
+    //this.sidebarService.toggle();
   }
   
+  nbCardClick(){
+    var teste = "";
+  }
+
+  showToggleSidebar(): boolean {
+    this.sidebarService.toggle(true, 'menu-sidebar');
+    this.layoutService.changeLayoutSize();
+    return true;
+  }
 
 }

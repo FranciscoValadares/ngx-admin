@@ -1,30 +1,22 @@
- 
 
-    
-<div class="lists row">
 
-  <div class="col-md-12 col-lg-4 col-xxxl-4">
-    <!-- <nb-card status="success">
+
+<div class="row">
+  <div class="col-md-12 col-lg-4 col-xxxl-4 column-one">
+    <nb-card status="success">
       <nb-card-header>
         Características
       </nb-card-header>
-      <nb-card-body> -->
+      <nb-card-body>
       
         <ngx-dynamic-form [formFields]="formFields | async "></ngx-dynamic-form>
-        <!-- <nb-checkbox status="basic">Basic</nb-checkbox>
-        <nb-checkbox status="primary">Primary</nb-checkbox>
-        <nb-checkbox status="success">Success</nb-checkbox>
-        <nb-checkbox status="danger">Danger</nb-checkbox>
-        <nb-checkbox status="warning">Warning</nb-checkbox>
-        <nb-checkbox status="info">Info</nb-checkbox> -->
+        <ngx-dynamic-form [formFields]="formFields | async "></ngx-dynamic-form>
       
-      <!-- </nb-card-body>
-    </nb-card> -->
-  </div> 
+      </nb-card-body>
+    </nb-card>
 
-  <div style='float:right;'>
-  <div class="col-md-12 col-lg-8 col-xxxl-8" style="position: fixed;">
-
+  </div>
+  <div id="right" class="col-md-12 col-lg-8 col-xxxl-8 column-two" style="float:right;">
     <nb-card status="success">
       <nb-card-header>
         Relatório/Laudo
@@ -35,8 +27,18 @@
         </ngx-tiny-mce>
       </nb-card-body>
     </nb-card>
-    
+
   </div>
 </div>
 
+
+<div class="lists row">
+  <div class="col-md-12 col-lg-4 col-xxxl-4">
+  </div> 
+  <div id="divrelatorio" class="col-md-12 col-lg-8 col-xxxl-8" style="float:right;">
+  </div>
 </div>
+
+
+
+ 

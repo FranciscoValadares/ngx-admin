@@ -46,6 +46,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private userService: UserData,
               private layoutService: LayoutService,
               private breakpointService: NbMediaBreakpointsService) {
+              
+              //this.toggle();
   }
 
   ngOnInit() {
@@ -69,6 +71,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe(themeName => this.currentTheme = themeName);
+    
+  
   }
 
   ngOnDestroy() {
@@ -80,15 +84,23 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.changeTheme(themeName);
   }
 
-  toggleSidebar(): boolean {
-    this.sidebarService.toggle(true, 'menu-sidebar');
-    this.layoutService.changeLayoutSize();
 
-    return false;
-  }
 
   navigateHome() {
     this.menuService.navigateHome();
+    return false;
+  }
+
+
+  toggleSidebar() {
+    this.sidebarService.toggle(true, 'menu-sidebar');
+    this.layoutService.changeLayoutSize();
+    return false;
+  }
+
+  toggle(): boolean {
+    this.sidebarService.toggle(false, 'menu-sidebar');
+    this.layoutService.changeLayoutSize();
     return false;
   }
 }

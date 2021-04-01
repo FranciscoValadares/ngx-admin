@@ -86,3 +86,11 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
 ), dark, dark);
+
+
+nb-card.tipos-exames-css {
+  width: 20% !important;
+  padding-right: 15px !important; 
+  padding-left: 15px !important;
+  cursor: pointer !important;
+}

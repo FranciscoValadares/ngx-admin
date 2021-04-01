@@ -93,7 +93,8 @@ export class DashboardComponent implements OnDestroy {
      
   constructor(private themeService: NbThemeService,
               private solarService: SolarData,
-              private _dataService: DataService ) {
+              private _dataService: DataService,
+              private sidebarService: NbSidebarService  ) {
 
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
@@ -125,6 +126,10 @@ export class DashboardComponent implements OnDestroy {
   public restartItemMenu() { 
     this._dataService.shareData = undefined;
     this._dataService.restartItemMenu();
+  }
+
+  toggle() {
+    //this.sidebarService.toggle();
   }
  
 }

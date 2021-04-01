@@ -7,39 +7,52 @@ export class TinyMceService {
   // valor:any = "Valor Inicial";
   constructor() { }
 
-  valor:any = `<h2>The world’s first rich text editor in the cloud</h2>
+  valor:any = `
+  
+ 
+<p style="text-align: center; font-size: 15px;">
+<img title="TinyMCE Logo" src="//www.tiny.cloud/images/glyph-tinymce@2x.png" alt="TinyMCE Logo" width="110" height="97" />
+</p>
+<h2 style="text-align: center;">Welcome to the TinyMCE Cloud demo!</h2>
+<h5 style="text-align: center;">Note, this includes some "enterprise/premium" features.<br>Visit the <a href="https://www.tiny.cloud/pricing">pricing page</a> to learn more about our premium plugins.</h5>
+<p>Please try out the features provided in this full featured example.</p>
 
-  <p>
-    Have you heard about Tiny Cloud? 
-    It’s the first step in our journey to help you deliver great content creation experiences, no matter your level of expertise. 
-    50,000 developers already agree. 
-    They get free access to our global CDN, image proxy services and auto updates to the TinyMCE editor. 
-    They’re also ready for some exciting updates coming soon.
-  </p>
+<h2>Got questions or need help?</h2>
+<p>Name: {$username}, StaffID: {$staffid}</p>
+<ul>
+  <li>Our <a class="mceNonEditable" href="//www.tiny.cloud/docs/">documentation</a> is a great resource for learning how to configure TinyMCE.</li>
+  <li>Have a specific question? Try the <a href="https://stackoverflow.com/questions/tagged/tinymce" target="_blank" rel="noopener"><code>tinymce</code> tag at Stack Overflow</a>.</li>
+  <li>We also offer enterprise grade support as part of <a href="https://www.tiny.cloud/pricing">TinyMCE premium subscriptions</a>.</li>
+</ul>
 
+<h2>A simple table to play with</h2>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Cost</th>
+      <th>Really?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TinyMCE Cloud</td>
+      <td>Get started for free</td>
+      <td>YES!</td>
+    </tr>
+    <tr>
+      <td>Plupload</td>
+      <td>Free</td>
+      <td>YES!</td>
+    </tr>
+  </tbody>
+</table>
 
-  <p>
-    One of these enhancements is <strong>Tiny Drive</strong>: imagine file management for TinyMCE, in the cloud, made super easy. 
-    Learn more at <a href='https://www.tinymce.com/tinydrive/'>tinymce.com/tinydrive</a>, where you’ll find a working demo and an opportunity to provide feedback to the product team.
-  </p>
+<h2>Found a bug?</h2>
+<p>If you think you have found a bug please create an issue on the <a href="https://github.com/tinymce/tinymce/issues">GitHub repo</a> to report it to the developers.</p>
 
-  <h3>An editor for every project</h3>
-
-  <p>
-    Here are some of our customer’s most common use cases for TinyMCE:
-    <ul>
-      <li>Content Management Systems (<em>e.g. WordPress, Umbraco</em>)</li>
-      <li>Learning Management Systems (<em>e.g. Blackboard</em>)</li>
-      <li>Customer Relationship Management and marketing automation (<em>e.g. Marketo</em>)</li>
-      <li>Email marketing (<em>e.g. Constant Contact</em>)</li>
-      <li>Content creation in SaaS systems (<em>e.g. Eventbrite, Evernote, GoFundMe, Zendesk</em>)</li>
-    </ul>
-  </p>
-
-  <p>
-    And those use cases are just the start. 
-    TinyMCE is incredibly flexible, and with hundreds of APIs there’s likely a solution for your editor project. 
-    If you haven’t experienced Tiny Cloud, get started today. 
-    You’ll even get a free trial of our premium plugins – no credit card required!
-  </p>`;
+<h2>Finally ...</h2>
+<p>Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.</p>
+<p>Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.</p>
+ `;
 }
