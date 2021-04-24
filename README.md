@@ -91,3 +91,13 @@ Visit [our homepage](https://www.akveo.com?utm_campaign=services%20-%20akveo%20w
 ### From Developers
 Made with :heart: by [Akveo team](https://www.akveo.com?utm_campaign=services%20-%20akveo%20website%20-%20ngx_admin%20github%20readme&utm_source=ngx_admin&utm_medium=referral&utm_content=from_developers_made_by). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
 We're always happy to receive your feedback!
+
+
+
+https://f1.media.brightcove.com/2/2985902027001/6169087186001/2985902027001_6169087186001_6169079604001.m3u8
+https://f1.media.brightcove.com/2/2985902027001/6169087231001/2985902027001_6169087231001_6169075415001.m3u8
+https://f1.media.brightcove.com/2/2985902027001/6169076207001/2985902027001_6169076207001_6169077640001.m3u8
+
+
+ffmpeg -i http://.../playlist.m3u8 -c copy -bsf:a aac_adtstoasc output.mp4
+ffmpeg -i "https://f1.media.brightcove.com/2/2985902027001/6169076207001/2985902027001_6169076207001_6169077640001.m3u8" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 file.mp4

@@ -34,6 +34,7 @@ export class PagesComponent  {
     this.nbMenuService.onItemClick().subscribe((event) => {
       if (event.item.title === 'Modalidades') {
         console.log('Categorias de Exames clicked');
+        this._dataService.setIsSidebarActivated(false);
         this.sidebarService.toggle(false, 'menu-sidebar');
         this.layoutService.changeLayoutSize();
       }

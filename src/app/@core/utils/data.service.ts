@@ -9,6 +9,8 @@ export class DataService {
   BKP_MENU_ITEMS: NbMenuItem[] = MENU_ITEMS.slice();
   //BKP_MENU_ITEMS: NbMenuItem[];
 
+  isSidebarActivated = false;
+
   shareData: String;
   itemsDoMenu: NbMenuItem[];
   primeiroMenuItem: NbMenuItem = {
@@ -28,6 +30,15 @@ export class DataService {
     //this.BKP_MENU_ITEMS = MENU_ITEMS;
   }
 
+
+  setIsSidebarActivated(situacao: boolean){
+    this.isSidebarActivated = situacao;
+  }
+
+  getIsSidebarActivated(): boolean{
+    return this.isSidebarActivated;
+  }
+ 
   getItemsDoMenu() {
    // if (this.shareData === null || this.shareData === '' || this.shareData === undefined) {
    //   MENU_ITEMS.splice(MENU_ITEMS.values());

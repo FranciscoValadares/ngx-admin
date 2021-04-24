@@ -13,6 +13,8 @@ import { PAGES_COMPONENTS } from '../pages.module';
 })
 export class ECommerceComponent {
 
+  private isSidebarActivated = false;
+
   constructor( private _dataService: DataService, 
                private sidebarService: NbSidebarService,
                private layoutService: LayoutService, ) {
@@ -24,16 +26,20 @@ export class ECommerceComponent {
     this._dataService.shareData = "primeiro";
     this._dataService.getItemsDoMenu();
 
+    this.showToggleSidebar();
   }
   public addSegundoItemMenu() { 
     Globals.tipoMenu = 'segundo'; 
     this._dataService.shareData = "segundo";
     this._dataService.getItemsDoMenu();
+
+    this.showToggleSidebar();
   }
   public restartItemMenu() { 
     this._dataService.shareData = undefined;
     this._dataService.restartItemMenu();
-    this.showToggleSidebar();
+
+    this.showToggleSidebar()
   }
 
   toggle() {
@@ -45,8 +51,13 @@ export class ECommerceComponent {
   }
 
   showToggleSidebar(): boolean {
-    this.sidebarService.toggle(true, 'menu-sidebar');
-    this.layoutService.changeLayoutSize();
+
+    if(!this._dataService.getIsSidebarActivated()){
+      this.sidebarService.toggle(true, 'menu-sidebar');
+      this.layoutService.changeLayoutSize();
+      this._dataService.setIsSidebarActivated(true);      
+    }
+    
     return true;
   }
 
